@@ -77,7 +77,7 @@
                     <div class="well span9">
                         <h4 class="well-title">{{session.name}}</h4>
                         <h6 style="margin-top:-10px">{{session.creatorName}}</h6>
-                        <span>Duration: {{session.duration}}</span><br />
+                        <span>Duration: {{session.duration | durations}}</span><br />
                         <span>Level: {{session.level}}</span><br />
                         <p>{{session.abstract}}</p>
                     </div>
@@ -92,7 +92,8 @@
 <script src="./lib/bootstrap.min.js"></script>
 <script src="./lib/angular/angular.js"></script>
 <script src="./js/app.js"></script>
-<script src="./js/controllers/EventController.js"></script>
+<script src="./js/controllers/EventController.js"></script>x
+<script src="./js/filters.js"></script>x
 
 </body>
 </html>
