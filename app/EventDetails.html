@@ -53,8 +53,15 @@
             <option selected value="name">Name</option>
             <option value="-upVoteCount">Votes</option>
         </select>
+        Show:
+        <select ng-model="query.level" class="input-medium">
+            <option selected value="">All</option>
+            <option selected value="introductory">Introductory</option>
+            <option selected value="intermediate">Intermediate</option>
+            <option selected value="advanced">Advanced</option>
+        </select>
         <ul class="thumbnails">
-            <li ng-repeat="session in event.sessions | orderBy:sortorder | limitTo:2">
+            <li ng-repeat="session in event.sessions | orderBy:sortorder | filter:query">
                 <div class="row session">
                     <div class="span0 well votingWidget">
                         <div class="votingButton" ng-click="upVoteSession(session)">
